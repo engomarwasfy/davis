@@ -9,6 +9,7 @@
 
 """ Configuration file."""
 
+
 import os
 import os.path as osp
 
@@ -57,7 +58,7 @@ __C.FILES.DB_INFO = osp.abspath(osp.join(__C.PATH.DATA_DIR,"Annotations/db_info.
 # Define the set of techniques to be loaded
 __C.EVAL_SET="all" # Accepted options [paper,all]
 
-assert __C.EVAL_SET == 'paper' or __C.EVAL_SET == 'all'
+assert __C.EVAL_SET in {'paper', 'all'}
 
 # Path to technique file, holding information about benchmark data
 __C.FILES.DB_BENCHMARK          = osp.abspath(

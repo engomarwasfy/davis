@@ -42,9 +42,7 @@ def parse_args():
 	parser.add_argument('--attributes', dest='attributes',default=['AC','DB','FM','MB','OCC'],
 			nargs='+', help='Select (set of) attributes to be displayed.')
 
-	args = parser.parse_args()
-
-	return args
+	return parser.parse_args()
 
 if __name__ == '__main__':
 
