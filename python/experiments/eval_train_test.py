@@ -39,9 +39,7 @@ def parse_args():
 	parser.add_argument('--statistic', dest='statistic',default='M',
 			help='Measure statistics: [M]ean,[R]ecall,[D]ecay.')
 
-	args = parser.parse_args()
-
-	return args
+	return parser.parse_args()
 
 if __name__ == '__main__':
 

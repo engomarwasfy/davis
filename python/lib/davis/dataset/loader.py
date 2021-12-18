@@ -173,12 +173,10 @@ class DAVISSegmentationLoader(object):
 	# ITERATORS
 	#######################################
 	def iternames(self):
-		for im,ma in zip(self.images.files,self._masks.files):
-			yield im,ma
+		yield from zip(self.images.files,self._masks.files)
 
 	def iteritems(self):
-		for im,ma in zip(self._images,self._masks):
-			yield im,ma
+		yield from zip(self._images,self._masks)
 
 class DAVISAnnotationLoader(DAVISSegmentationLoader):
 
